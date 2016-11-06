@@ -1,3 +1,6 @@
+# API keys
+credentials.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -48,6 +51,9 @@ coverage.xml
 # Translations
 *.mo
 *.pot
+
+# Mac stuff:
+*.DS_Store
 
 # Django stuff:
 *.log
