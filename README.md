@@ -20,6 +20,7 @@ Get a list of the shortcodes used to signify each dataset:
 
 ```
 >>> print(api.list_dataset_codes())
+
 ['ALC', 'BOP', 'BPI', 'CRT', 'ESM', 'GDP', 'GDPRgional', 'GST', 'LMS', 'NACFCentralGovernment', 'NACFLocalGovernment', 'OTI', 'ProductivityStatistics', 'RTS', 'VBW', 'WTS']
 ```
 
@@ -27,6 +28,7 @@ Get a dataset's descriptive name:
 
 ```
 >>> print(api.get_dataset_name('ALC'))
+
 Alcohol available for Consumption
 ```
 
@@ -36,6 +38,7 @@ Get all data relating to a specific dataset and print the first few results to t
 >>> from pprint import pprint as pp
 >>> alc = api.get_group_data('ALC')
 >>> pp(alc[:5])
+
 [{u'DataValues': u'6.389809',
   u'Group': u'Litres of Alcohol',
   u'Id': 7900,
@@ -48,7 +51,7 @@ Get all data relating to a specific dataset and print the first few results to t
   u'status': u'FINAL'},
  {u'DataValues': u'6.794944',
   u'Group': u'Litres of Alcohol',
-### <snip/> ###
+  ...
 ]
 ```
 
@@ -57,16 +60,18 @@ Get a list of the unique groups for a specific dataset and print the first few r
 ```
 >>> fields = api.get_dataset_groups('ALC')
 >>> pp(fields)
+
 [u'Litres of Beverage',
  u'Litres of Alcohol',
  u'Litres of Alcohol Per Head of Population - by alcohol type']
 ```
 
-Scope a data request to a specific group and print result to the console:
+Scope a data request to a specific group and print first few results to the console:
 
 ```
 >>> alc_subset = api.get_group_data('ALC', 'Litres of Alcohol Per Head of Population - by alcohol type')
 >>> pp(alc_subset[:5])
+
 [{u'DataValues': u'0.317962792',
   u'Group': u'Litres of Alcohol Per Head of Population - by alcohol type',
   u'Id': 5072,
@@ -79,6 +84,6 @@ Scope a data request to a specific group and print result to the console:
   u'status': u'FINAL'},
  {u'DataValues': u'0.241498648',
   u'Group': u'Litres of Alcohol Per Head of Population - by alcohol type',
-### <snip/> ###
+  ...
 ]
 ```
