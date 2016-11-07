@@ -1,8 +1,6 @@
 import csv, json
 from requests import get
 
-from pprint import pprint as pp
-
 # TODO: fix this shortcut to suppress insecure platform errors
 # see http://stackoverflow.com/questions/29099404/ssl-insecureplatform-error-when-using-requests-package
 import requests.packages.urllib3
