@@ -65,7 +65,6 @@ class Api():
         response = get(url, headers=headers, params=params)
         if self.verbose:
             print('Fetched: {}'.format(response.url))
-        self.errors = None
         if response.status_code == 200:
             if self.verbose:
                 print('Retrieved: {} rows'.format( len(response.json()) ))
@@ -73,10 +72,3 @@ class Api():
         else:
             print('ERROR: Status code {} while retrieving {}'.format(response.status_code, response.url))
             return None
-
-
-def main():
-    pass
-
-if __name__ == '__main__':
-    main()
