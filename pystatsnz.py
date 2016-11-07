@@ -78,14 +78,7 @@ class Api():
 
 
 def main():
-    import credentials
-    api = Api(credentials.statsnz_key)
-    for code in api.list_dataset_codes():
-        fields = api.get_dataset_groups(code)
-        pp(fields)
-        data = api.get_group_data(code, 'Litres of Alcohol Per Head of Population - by alcohol type')
-        #pp(data)
-        break
+    pass
 
 if __name__ == '__main__':
     main()
