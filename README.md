@@ -1,6 +1,7 @@
 # pyStatsNZ
 Python wrapper for prototype [StatisticsNZ API](https://statisticsnz.portal.azure-api.net/). Thanks to Jonathon Marshall for his [R wrapper package](https://github.com/jmarshallnz/statsNZ), which provided guidance and inspiration.
 
+![animated demo](pystatsnz.gif)
 
 ## Installation
 
